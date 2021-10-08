@@ -97,14 +97,7 @@ namespace ProgrammingClub.Controllers
             {
                 case SignInStatus.Success:
                     {
-                        //if (UserManager.IsInRole(User.Identity.GetUserId(), "Admin"))
-                        //{
-                        //    return RedirectToAction("Index", "Home");
-                        //}
-                        //if (UserManager.IsInRole(User.Identity.GetUserId(), "User"))
-                        //{
-                        //    return RedirectToAction("Index", "Announcements");
-                        //}
+                        
                         
                         return RedirectToLocal(returnUrl);
                     }
