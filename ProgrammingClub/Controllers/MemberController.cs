@@ -1,4 +1,5 @@
 ﻿using ProgrammingClub.Models;
+using ProgrammingClub.Models.ViewModels;
 using ProgrammingClub.Repositories;
 using System;
 using System.Collections.Generic;
@@ -21,9 +22,18 @@ namespace ProgrammingClub.Controllers
         // GET: Member/Details/5
         public ActionResult Details(Guid id)
         {
+
             MemberModel memberModel = memberRepository.GetMemberById(id);
             return View("DetailsMember", memberModel);
         }
+
+        public ActionResult DetailsViewModel(Guid id)
+        {
+            MemberCodeSnippetsViewModel viewModel = memberRepository.GetMemberCodeSnippets(id);
+            return View("DetailsViewModel", viewModel);
+        }
+
+
 
         // GET: Member/Create
         public ActionResult Create()

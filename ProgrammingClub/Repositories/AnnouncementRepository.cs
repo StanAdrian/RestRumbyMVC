@@ -65,8 +65,17 @@ namespace ProgrammingClub.Repositories
 
         }
 
-      
 
+        public void DeleteAnnouncement(Guid id)
+        {
+            Announcement announcementToBeDeleted = dbContext.Announcements.
+                FirstOrDefault(ann => ann.IDAnnouncement == id);
+            if (announcementToBeDeleted != null)
+            {
+                dbContext.Announcements.DeleteOnSubmit(announcementToBeDeleted);
+                dbContext.SubmitChanges();
+            }
+        }
 
 
 
@@ -105,16 +114,7 @@ namespace ProgrammingClub.Repositories
         }
 
 
-        public void DeleteAnnouncement(Guid id)
-        {
-            Announcement announcementToBeDeleted = dbContext.Announcements.
-                FirstOrDefault(ann => ann.IDAnnouncement == id);
-            if(announcementToBeDeleted != null)
-            {
-                dbContext.Announcements.DeleteOnSubmit(announcementToBeDeleted);
-                dbContext.SubmitChanges();
-            }
-        }
+      
 
 
 

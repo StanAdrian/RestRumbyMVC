@@ -42,9 +42,9 @@ namespace ProgrammingClub.Models.DBObjects
     partial void InsertAnnouncement(Announcement instance);
     partial void UpdateAnnouncement(Announcement instance);
     partial void DeleteAnnouncement(Announcement instance);
-    partial void InsertCodeSnippets(CodeSnippets instance);
-    partial void UpdateCodeSnippets(CodeSnippets instance);
-    partial void DeleteCodeSnippets(CodeSnippets instance);
+    partial void InsertCodeSnippets(CodeSnippet instance);
+    partial void UpdateCodeSnippets(CodeSnippet instance);
+    partial void DeleteCodeSnippets(CodeSnippet instance);
     #endregion
 		
 		public ClubMembershipModelsDataContext() : 
@@ -109,11 +109,11 @@ namespace ProgrammingClub.Models.DBObjects
 			}
 		}
 		
-		public System.Data.Linq.Table<CodeSnippets> CodeSnippets
+		public System.Data.Linq.Table<CodeSnippet> CodeSnippets
 		{
 			get
 			{
-				return this.GetTable<CodeSnippets>();
+				return this.GetTable<CodeSnippet>();
 			}
 		}
 	}
@@ -138,7 +138,7 @@ namespace ProgrammingClub.Models.DBObjects
 		
 		private EntitySet<Membership> _Memberships;
 		
-		private EntitySet<CodeSnippets> _CodeSnippets;
+		private EntitySet<CodeSnippet> _CodeSnippets;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -161,7 +161,7 @@ namespace ProgrammingClub.Models.DBObjects
 		public Member()
 		{
 			this._Memberships = new EntitySet<Membership>(new Action<Membership>(this.attach_Memberships), new Action<Membership>(this.detach_Memberships));
-			this._CodeSnippets = new EntitySet<CodeSnippets>(new Action<CodeSnippets>(this.attach_CodeSnippets), new Action<CodeSnippets>(this.detach_CodeSnippets));
+			this._CodeSnippets = new EntitySet<CodeSnippet>(new Action<CodeSnippet>(this.attach_CodeSnippets), new Action<CodeSnippet>(this.detach_CodeSnippets));
 			OnCreated();
 		}
 		
@@ -299,7 +299,7 @@ namespace ProgrammingClub.Models.DBObjects
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Member_CodeSnippet", Storage="_CodeSnippets", ThisKey="IDMember", OtherKey="IDMember")]
-		public EntitySet<CodeSnippets> CodeSnippets
+		public EntitySet<CodeSnippet> CodeSnippets
 		{
 			get
 			{
@@ -343,13 +343,13 @@ namespace ProgrammingClub.Models.DBObjects
 			entity.Member = null;
 		}
 		
-		private void attach_CodeSnippets(CodeSnippets entity)
+		private void attach_CodeSnippets(CodeSnippet entity)
 		{
 			this.SendPropertyChanging();
 			entity.Member = this;
 		}
 		
-		private void detach_CodeSnippets(CodeSnippets entity)
+		private void detach_CodeSnippets(CodeSnippet entity)
 		{
 			this.SendPropertyChanging();
 			entity.Member = null;
@@ -989,7 +989,7 @@ namespace ProgrammingClub.Models.DBObjects
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.CodeSnippets")]
-	public partial class CodeSnippets : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class CodeSnippet : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -1022,7 +1022,7 @@ namespace ProgrammingClub.Models.DBObjects
     partial void OnRevisionChanged();
     #endregion
 		
-		public CodeSnippets()
+		public CodeSnippet()
 		{
 			this._Member = default(EntityRef<Member>);
 			OnCreated();
