@@ -14,4 +14,5 @@ namespace ProgrammingClub.Models
         public string Description { get; set; }
         public string Resume { get; set; }
     }
+
 }

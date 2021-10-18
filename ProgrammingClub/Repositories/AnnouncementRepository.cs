@@ -9,7 +9,7 @@ namespace ProgrammingClub.Repositories
 {
     public class AnnouncementRepository
     {
-        //injectez containerul ORM (dbml -> drag and drop)
+       
         private ClubMembershipModelsDataContext dbContext;
 
         public AnnouncementRepository()
