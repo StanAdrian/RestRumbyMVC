@@ -53,6 +53,7 @@ namespace ProgrammingClub.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
         // GET: Announcements/Edit/5
         public ActionResult Edit(Guid id)
         {
@@ -77,7 +78,7 @@ namespace ProgrammingClub.Controllers
                 return View("EditAnnouncement");
             }
         }
-
+        [Authorize(Roles ="Admin")]
         // GET: Announcements/Delete/5
         public ActionResult Delete(Guid id)
         {

@@ -11,6 +11,7 @@ namespace ProgrammingClub.Controllers
     public class CodeSnippetController : Controller
     {
         CodeSnippetRepository codeSnippetRepository = new CodeSnippetRepository();
+        [Authorize(Roles = "Admin, User, Visitor")]
         // GET: CodeSnippet
         public ActionResult Index()
         {
