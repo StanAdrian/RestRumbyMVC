@@ -105,9 +105,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ProgrammingClub\ProgrammingClub.csproj">
+    <ProjectReference Include="..\ProgrammingClub\RestaurantRumby.csproj">
       <Project>{2A753017-DD72-498B-8335-4393931CF502}</Project>
-      <Name>ProgrammingClub</Name>
+      <Name>RestaurantRumby</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
