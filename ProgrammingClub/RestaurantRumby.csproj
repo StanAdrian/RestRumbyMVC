@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -125,12 +131,6 @@
     <Reference Include="System.Web.Http.WebHost">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -193,6 +193,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AnnouncementModel.cs" />
+    <Compile Include="Models\BackOfficeModel.cs" />
     <Compile Include="Models\CodeSnippetModel.cs" />
     <Compile Include="Models\DBObjects\ClubMembershipModels.designer.cs">
       <AutoGen>True</AutoGen>
@@ -207,6 +208,7 @@
     <Compile Include="Models\ViewModels\MemberCodeSnippetsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AnnouncementRepository.cs" />
+    <Compile Include="Repositories\BackOfficeRepository.cs" />
     <Compile Include="Repositories\CodeSnippetRepository.cs" />
     <Compile Include="Repositories\MemberRepository.cs" />
     <Compile Include="Repositories\MembershipTypeRepository.cs" />
@@ -296,8 +298,11 @@
     <Content Include="Views\CodeSnippet\Index.cshtml" />
     <Content Include="Views\CodeSnippet\Create.cshtml" />
     <Content Include="Views\Member\DetailsViewModel.cshtml" />
+    <Content Include="Views\BackOffice\BackOffice.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Default\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
