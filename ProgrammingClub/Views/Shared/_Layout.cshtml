@@ -72,6 +72,7 @@
 
 </head>
 <body>
+    
     <div class="page-wrapper chiller-theme toggled">
         <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
             <i class="fas fa-bars"></i>
@@ -129,13 +130,10 @@
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="#">
-                                            Dashboard 1
-                                            <span class="badge badge-pill badge-success">Pro</span>
-                                        </a>
+                                        <a href="#">Dashboard 1<span class="badge badge-pill badge-success">Pro</span></a>
                                     </li>
                                     <li>
-                                        <a href="#">Dashboard 2</a>
+                                        <a href="#">@Html.ActionLink("Home", "Index", "Home")</a>
                                     </li>
                                     <li>
                                         <a href="#">Dashboard 3</a>
@@ -152,9 +150,8 @@
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="#">
-                                            Products
-
+                                        <a href="#">                                            
+                                            @Html.ActionLink("Products2", "Index", "Home")
                                         </a>
                                     </li>
                                     <li>
