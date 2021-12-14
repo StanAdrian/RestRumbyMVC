@@ -7,6 +7,7 @@ namespace ProgrammingClub.Models
 {
     public class BackOfficeModel
     {
+
         public string name { get; set; }
     }
 }

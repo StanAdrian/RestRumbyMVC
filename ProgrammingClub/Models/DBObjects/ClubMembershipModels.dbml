@@ -9,7 +9,7 @@
       <Column Name="Description" Type="System.String" DbType="VarChar(1050)" CanBeNull="true" />
       <Column Name="Resume" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Association Name="Member_Membership" Member="Memberships" ThisKey="IDMember" OtherKey="IDMember" Type="Membership" />
-      <Association Name="Member_CodeSnippet" Member="CodeSnippets" ThisKey="IDMember" OtherKey="IDMember" Type="CodeSnippets" />
+      <Association Name="Member_CodeSnippets" Member="CodeSnippets" ThisKey="IDMember" OtherKey="IDMember" Type="CodeSnippet" />
     </Type>
   </Table>
   <Table Name="dbo.Memberships" Member="Memberships">
@@ -45,13 +45,13 @@
     </Type>
   </Table>
   <Table Name="dbo.CodeSnippets" Member="CodeSnippets">
-    <Type Name="CodeSnippets">
+    <Type Name="CodeSnippet">
       <Column Name="IDCodeSnippet" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Title" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="ContentCode" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
       <Column Name="IDMember" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
       <Column Name="Revision" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Member_CodeSnippet" Member="Member" ThisKey="IDMember" OtherKey="IDMember" Type="Member" IsForeignKey="true" />
+      <Association Name="Member_CodeSnippets" Member="Member" ThisKey="IDMember" OtherKey="IDMember" Type="Member" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

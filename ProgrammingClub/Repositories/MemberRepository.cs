@@ -100,9 +100,6 @@ namespace ProgrammingClub.Repositories
         }
 
 
-
-
-
         public MemberCodeSnippetsViewModel GetMemberCodeSnippets(Guid memberID)
         {
             MemberCodeSnippetsViewModel memberCodeSnippetsViewModel = new MemberCodeSnippetsViewModel();

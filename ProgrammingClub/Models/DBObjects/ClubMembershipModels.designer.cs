@@ -42,9 +42,9 @@ namespace ProgrammingClub.Models.DBObjects
     partial void InsertAnnouncement(Announcement instance);
     partial void UpdateAnnouncement(Announcement instance);
     partial void DeleteAnnouncement(Announcement instance);
-    partial void InsertCodeSnippets(CodeSnippet instance);
-    partial void UpdateCodeSnippets(CodeSnippet instance);
-    partial void DeleteCodeSnippets(CodeSnippet instance);
+    partial void InsertCodeSnippet(CodeSnippet instance);
+    partial void UpdateCodeSnippet(CodeSnippet instance);
+    partial void DeleteCodeSnippet(CodeSnippet instance);
     #endregion
 		
 		public ClubMembershipModelsDataContext() : 
@@ -298,7 +298,7 @@ namespace ProgrammingClub.Models.DBObjects
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Member_CodeSnippet", Storage="_CodeSnippets", ThisKey="IDMember", OtherKey="IDMember")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Member_CodeSnippets", Storage="_CodeSnippets", ThisKey="IDMember", OtherKey="IDMember")]
 		public EntitySet<CodeSnippet> CodeSnippets
 		{
 			get
@@ -1132,7 +1132,7 @@ namespace ProgrammingClub.Models.DBObjects
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Member_CodeSnippet", Storage="_Member", ThisKey="IDMember", OtherKey="IDMember", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Member_CodeSnippets", Storage="_Member", ThisKey="IDMember", OtherKey="IDMember", IsForeignKey=true)]
 		public Member Member
 		{
 			get

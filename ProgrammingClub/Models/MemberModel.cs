@@ -13,6 +13,10 @@ namespace ProgrammingClub.Models
         public string Position { get; set; }
         public string Description { get; set; }
         public string Resume { get; set; }
+        public string Address { get; set; }
+        public string NbPhone { get; set; }
+
+
     }
 
 }
